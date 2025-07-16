@@ -1,25 +1,64 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #fff;
+    color: #222;
 }
 
-header {
-    background-color: #004080;
-    color: white;
-    padding: 1rem;
+.hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     list-style: none;
-    background-color: #333;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -29,6 +68,8 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    padding: 0.25rem 0;
 }
 
 main {
@@ -54,12 +95,13 @@ input, textarea {
 }
 
 button {
-    padding: 0.75rem;
-    background-color: #004080;
-    color: white;
+    padding: 0.75rem 1.5rem;
+    background-color: #000;
+    color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    font-weight: bold;
 }
 
 footer {
