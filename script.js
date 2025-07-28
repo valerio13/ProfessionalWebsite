@@ -7,4 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
             form.reset();
         });
     }
+
+    import('https://cdn.jsdelivr.net/npm/@n8n/chat/+esm').then(({ createChat }) => {
+        createChat({
+            element: '#n8n-chat',
+            backendUrl: 'https://ejemplo.com/webhook/chat'
+        });
+    });
 });
